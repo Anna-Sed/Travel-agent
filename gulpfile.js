@@ -11,6 +11,7 @@ const sourceMaps = require('gulp-sourcemaps');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const webpack = require('webpack-stream');
+const webpackConfig = require('./webpack.config');
 const babel = require('gulp-babel');
 
 gulp.task('clean', function(done) {
@@ -74,7 +75,7 @@ gulp.task('js', function() {
         .src('./src/js/*.js')
         .pipe(plumber(plumberNotify('JS')))
         .pipe(babel())
-        .pipe(webpack(require('./webpack.config.js')))
+        .pipe(webpack(webpackConfig))
         .pipe(gulp.dest('./dist/js'))
 });
 

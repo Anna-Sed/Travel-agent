@@ -1,0 +1,12 @@
+nav {
+  background-color: rgb(223, 230, 125);
+  padding: 100px 0;
+  font-size: 38px;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  nav {
+    font-size: 32px;
+  }
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJsb2Nrcy9fbmF2LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQU5KO0lBT1EiLCJzb3VyY2VzQ29udGVudCI6WyJuYXYge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyMjMsIDIzMCwgMTI1KTtcbiAgICBwYWRkaW5nOiAxMDBweCAwO1xuICAgIGZvbnQtc2l6ZTogMzhweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgICBAbWVkaWEgKG1heC13aWR0aDogMTIwMHB4KSB7XG4gICAgICAgIGZvbnQtc2l6ZTogMzJweDtcbiAgICB9XG59Il0sImZpbGUiOiJtYWluLmNzcyJ9 */
