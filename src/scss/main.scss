@@ -1,2 +1,4 @@
-@use 'blocks/nav.scss';
-@use 'blocks/header';
+// @use 'blocks/nav.scss';
+// @use 'blocks/header';
+
+@import "./blocks/*.scss";
