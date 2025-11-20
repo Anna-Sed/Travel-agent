@@ -13,6 +13,7 @@ const plumber = require('gulp-plumber');
 const webpack = require('webpack-stream');
 const webpackConfig = require('./webpack.config');
 const babel = require('gulp-babel');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('clean', function(done) {
     if(fs.existsSync('./dist/')) {
@@ -56,7 +57,12 @@ gulp.task('sass', function() {
 })
 
 gulp.task('copyImg', function() {
-    return gulp.src('./src/img/**/*').pipe(gulp.dest('./dist/img/'))
+    return gulp
+        .src('./src/img/**/*')
+        //verbose: true - это настройка, благодаря кот. при оптимизации мы увидем,
+        // какие файлы оптимизированны и сколько место оптимизир.
+        .pipe(imagemin({ verbose: true }))
+        .pipe(gulp.dest('./dist/img/'))
 })
 
 // Копирование наших шрифтов в папку dist
