@@ -5,6 +5,7 @@ const config = {
     entry: {  // точки входа для сборки
         index: './src/js/index.js',
         contacts: './src/js/contacts.js',
+        about: './src/js/about.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist/js'),

@@ -14,6 +14,8 @@ const webpack = require('webpack-stream');
 const webpackConfig = require('./webpack.config');
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
+// gulp-changed позволяет gulp обновляет только те файлы, кот. изменились 
+const changed = require('gulp-changed');
 
 gulp.task('clean', function(done) {
     if(fs.existsSync('./dist/')) {
@@ -39,7 +41,10 @@ const plumberNotify = (title) => ({
 
 gulp.task('html', function() {
     return gulp
-        .src('./src/*.html')
+    // **/*.html - первый и второй уровень вложенности файлов
+    // '!./src/html/blocks/*.html' - маска. Все html файлы из папки blocks включать не нужно. ! - отрицание.
+        .src(['./src/html/**/*.html', '!./src/html/blocks/*.html']) 
+        .pipe(changed('./dist/'))
         .pipe(plumber(plumberNotify('HTML')))
         .pipe(fileInclude(fileIncludeSetting))
         .pipe(gulp.dest('./dist/'))
@@ -48,6 +53,7 @@ gulp.task('html', function() {
 gulp.task('sass', function() {
     return gulp
         .src('./src/scss/*.scss')
+        .pipe(changed('./dist/css/'))
         .pipe(plumber(plumberNotify('SCSS')))
         .pipe(sourceMaps.init())
         .pipe(sass())
@@ -59,6 +65,7 @@ gulp.task('sass', function() {
 gulp.task('copyImg', function() {
     return gulp
         .src('./src/img/**/*')
+        .pipe(changed('./dist/img/'))
         //verbose: true - это настройка, благодаря кот. при оптимизации мы увидем,
         // какие файлы оптимизированны и сколько место оптимизир.
         .pipe(imagemin({ verbose: true }))
@@ -67,18 +74,25 @@ gulp.task('copyImg', function() {
 
 // Копирование наших шрифтов в папку dist
 gulp.task('fonts', function() {
-    return gulp.src('./src/fonts/**/*').pipe(gulp.dest('./dist/fonts/'))
+    return gulp
+        .src('./src/fonts/**/*')
+        .pipe(changed('./dist/fonts/'))
+        .pipe(gulp.dest('./dist/fonts/'))
 })
 
 // Копирование доп файлов для пользователя в папку dis 
 // (например пфки и какие-то документы, чтобы пользовотель их скачивал с сайта)
 gulp.task('files', function() {
-    return gulp.src('./src/files/**/*').pipe(gulp.dest('./dist/files/'))
+    return gulp
+        .src('./src/files/**/*')
+        .pipe(changed('./dist/files/'))
+        .pipe(gulp.dest('./dist/files/'))
 })
 
 gulp.task('js', function() {
     return gulp
         .src('./src/js/*.js')
+        .pipe(changed('./dist/js'))
         .pipe(plumber(plumberNotify('JS')))
         .pipe(babel())
         .pipe(webpack(webpackConfig))
