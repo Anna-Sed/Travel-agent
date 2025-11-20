@@ -1,4 +1,5 @@
-// @use 'blocks/nav.scss';
-// @use 'blocks/header';
-
 @import "./blocks/*.scss";
+
+* {
+    box-sizing: border-box;
+}
