@@ -22,7 +22,11 @@ const plumber = require('gulp-plumber');
 const webpack = require('webpack-stream');
 const webpackConfig = require('./../webpack.config');
 const babel = require('gulp-babel');
+
+// Images
 const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+
 // gulp-changed позволяет gulp обновляет только те файлы, кот. изменились 
 const changed = require('gulp-changed');
 
@@ -80,6 +84,10 @@ gulp.task('sass:docs', function() {
 gulp.task('copyImg:docs', function() {
     return gulp
         .src('./src/img/**/*')
+        .pipe(changed('./docs/img/'))
+        .pipe(webp())
+        .pipe(gulp.dest('./docs/img/'))
+        .pipe(gulp.src('./src/img/**/*'))
         .pipe(changed('./docs/img/'))
         //verbose: true - это настройка, благодаря кот. при оптимизации мы увидем,
         // какие файлы оптимизированны и сколько место оптимизир.
