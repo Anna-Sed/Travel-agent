@@ -1,10 +1,14 @@
 const gulp = require('gulp');
+
+// HTML
 const fileInclude = require('gulp-file-include');
+const htmlclean = require('gulp-htmlclean');
 
 // SASS
 const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
+const csso = require('gulp-csso');
 
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
@@ -54,6 +58,7 @@ gulp.task('html:docs', function() {
         .pipe(changed('./docs/'))
         .pipe(plumber(plumberNotify('HTML')))
         .pipe(fileInclude(fileIncludeSetting))
+        .pipe(htmlclean()) // Минификация html
         .pipe(gulp.dest('./docs/'))
 });
 
@@ -66,6 +71,7 @@ gulp.task('sass:docs', function() {
         .pipe(sassGlob())
         .pipe(groupMedia()) // Запускать лучше перед sass, тогда исходные карты ломаться не будут.
         .pipe(sass())
+        .pipe(csso()) // Минификация scss
         .pipe(autoprefixer())
         .pipe(sourceMaps.write())
         .pipe(gulp.dest('./docs/css/'))
