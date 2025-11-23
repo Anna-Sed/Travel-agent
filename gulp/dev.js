@@ -42,7 +42,7 @@ gulp.task('html:dev', function() {
     // **/*.html - первый и второй уровень вложенности файлов
     // '!./src/html/blocks/*.html' - маска. Все html файлы из папки blocks включать не нужно. ! - отрицание.
         .src(['./src/html/**/*.html', '!./src/html/blocks/*.html']) 
-        .pipe(changed('./build/'))
+        .pipe(changed('./build/', { hasChanged: changed.compareContents }))
         .pipe(plumber(plumberNotify('HTML')))
         .pipe(fileInclude(fileIncludeSetting))
         .pipe(gulp.dest('./build/'))
