@@ -69,6 +69,7 @@ gulp.task('html:docs', function() {
         .pipe(gulp.dest('./docs/'))
 });
 
+// Работает, но есть ошибки
 gulp.task('sass:docs', function() {
     return gulp
         .src('./src/scss/*.scss')
@@ -76,14 +77,34 @@ gulp.task('sass:docs', function() {
         .pipe(plumber(plumberNotify('SCSS')))
         .pipe(sourceMaps.init())
         .pipe(sassGlob())
-        .pipe(webpCss())
-        .pipe(groupMedia()) // Запускать лучше перед sass, тогда исходные карты ломаться не будут.
         .pipe(sass())
-        .pipe(csso()) // Минификация scss
-        .pipe(autoprefixer())
+        .pipe(autoprefixer({
+            cascade: false
+        }))
         .pipe(sourceMaps.write())
         .pipe(gulp.dest('./docs/css/'))
-})
+        .pipe(webpCss())
+        .pipe(groupMedia())
+        .pipe(csso()) // Минификация scss
+        .pipe(gulp.dest('./docs/css/'));
+});
+
+// Оригинал
+// gulp.task('sass:docs', function() {
+//     return gulp
+//         .src('./src/scss/*.scss')
+//         .pipe(changed('./docs/css/'))
+//         .pipe(plumber(plumberNotify('SCSS')))
+//         .pipe(sourceMaps.init())
+//         .pipe(autoprefixer())
+//         .pipe(sassGlob())
+//         .pipe(webpCss())
+//         .pipe(groupMedia()) // Запускать лучше перед sass, тогда исходные карты ломаться не будут.
+//         .pipe(sass()).on('error', sass.logError)
+//         .pipe(csso()) 
+//         .pipe(sourceMaps.write())
+//         .pipe(gulp.dest('./docs/css/'))
+// })
 
 gulp.task('copyImg:docs', function() {
     return gulp

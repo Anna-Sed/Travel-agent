@@ -1,10 +1,12 @@
-@import "./blocks/*.scss";
+@use "./base/vars";
+@use "./base/reset";
+@use "./base/base";
+@use "./base/utils";
+@use "./base/containers";
+@use "./base/sticky-footer";
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background-image: url('./../img/02.jpg');
-    background-size: cover;
-}
+@use "./blocks/footer";
+@use "./blocks/header";
+@use "./blocks/logo";
+@use "./blocks/mobile-nav";
+@use "./blocks/nav-icon";
