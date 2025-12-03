@@ -1,1 +1,0 @@
-!function(){"use strict";var e,o,t;e=document.querySelector(".mobile-nav-btn"),o=document.querySelector(".mobile-nav"),t=document.querySelector(".nav-icon"),e.addEventListener("click",function(){o.classList.toggle("mobile-nav--open"),t.classList.toggle("nav-icon--active"),document.body.classList.toggle("no-scroll")})}();

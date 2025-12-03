@@ -1,11 +1,21 @@
 <header class="header">
     <div class="container">
-        <div class="header__row">
-            <div class="logo">Logo</div>
-            <button class="mobile-nav-btn">
-                <div class="nav-icon"></div>
-            </button>
-        </div>
+        <nav class="nav">
+            <a href="#!" class="logo">
+                <img src="./img/logo/logo.svg" alt="Logo">
+            </a>
+            <ul class="nav__list">
+                <li><a href="#!" class="active">Home</a></li>
+                <li><a href="#!">About</a></li>
+                <li><a href="#!">Packages</a></li>
+                <li><a href="#!">FAQ</a></li>
+                <li><a href="#!">Community</a></li>
+            </ul>
+            <div class="nav__btns">
+                <button class="btn-login">Login</button>
+                <button class="btn-signup">Sign Up</button>
+            </div>
+        </nav>
     </div>
 </header>
 @@include('mobile-nav.html')

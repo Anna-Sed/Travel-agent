@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 32px;
+
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+
+    a {
+        color: #181818;
+    }
+
+    a:hover, a.active {
+        color: var(--accent);
+    } 
+}
+
+.nav__btns {
+    display: flex;
+    justify-content: end;
+    column-gap: 12px;
+}

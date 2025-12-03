@@ -1,0 +1,22 @@
+.btn-login {
+    border: 1px solid #b7b7b7;
+    border-radius: 8px;
+    padding: 8px 20px;
+    color: #454545;
+    transition: opacity 0.4s ease, box-shadow 0.3s ease-in;
+}
+
+.btn-signup {
+    border-radius: 8px;
+    padding: 8px 20px;
+
+    color: #fff;
+    background: #181818;
+    transition: opacity 0.4s ease, box-shadow 0.3s ease-in;
+}
+
+.btn-login:hover,
+.btn-signup:hover {
+   opacity: 0.6;
+   box-shadow: 0 4px 8px rgba(94, 82, 82, 0.3);
+}

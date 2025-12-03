@@ -5,6 +5,8 @@
 @use "./base/containers";
 @use "./base/sticky-footer";
 
+@use "./blocks/nav";
+@use "./blocks/btns";
 @use "./blocks/footer";
 @use "./blocks/header";
 @use "./blocks/logo";
