@@ -1,0 +1,84 @@
+.discover {
+    padding: 60px 0;
+}
+
+.discover__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    align-items: center;
+}
+
+.discover__desc {
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+.discover__text {
+    padding-top: 24px;
+    padding-bottom: 40px;
+}
+
+// FORM START
+.discover__form {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+
+    padding: 12px 16px;
+    border: 1px solid rgba(144, 144, 144, 0.3);
+    border-radius: 16px;
+    padding: 12px 16px;
+}
+
+.form__devider {
+    width: 1px;
+    height: 24px;
+    opacity: 1;
+    background: var(--text-muted);
+
+}
+
+.form-search-btn {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: var(--accent);
+}
+
+.form__label  {
+    display: grid;
+    gap: 8px;
+    padding-left: 35px;
+    background-image: url('./../img//logo/map.svg');
+    background-size: 24px 24px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    span {
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+}
+
+.form__input {
+    font-weight: 450;
+    font-size: 14px;
+
+    &::placeholder {
+        color: var(--text-muted);
+    }
+}
+// FORM END
+
+.discover__picture {
+    position: relative;
+}
+
+.discover__picture-down {
+    position: absolute;
+    content: '';
+    bottom: 20px;
+    right: 15px;
+}

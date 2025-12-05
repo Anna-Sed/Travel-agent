@@ -108,7 +108,7 @@ gulp.task('sass:docs', function() {
 
 gulp.task('copyImg:docs', function() {
     return gulp
-        .src('./src/img/**/*')
+        .src('./src/img/**/*', {encoding: false}) //  начиная с 5ой версии gulp.src кодирует все файлы в текстовом формате, из за этого изображения "бьются". {encoding: false} - помогает
         .pipe(changed('./docs/img/'))
         .pipe(webp())
         .pipe(gulp.dest('./docs/img/'))

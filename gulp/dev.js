@@ -62,7 +62,7 @@ gulp.task('sass:dev', function() {
 
 gulp.task('copyImg:dev', function() {
     return gulp
-        .src('./src/img/**/*')
+        .src('./src/img/**/*', {encoding: false}) //  начиная с 5ой версии gulp.src кодирует все файлы в текстовом формате, из за этого изображения "бьются". {encoding: false} - помогает
         .pipe(changed('./build/img/'))
         //verbose: true - это настройка, благодаря кот. при оптимизации мы увидем,
         // какие файлы оптимизированны и сколько место оптимизир.
@@ -99,7 +99,12 @@ gulp.task('js:dev', function() {
 
 const serverOption = {
     server: {
-        baseDir: './build/' // Папка, которую нужно обслуживать
+        baseDir: './build/', // Папка, которую нужно обслуживать
+         mimeTypes: [         // Добавляем настройку MIME-типов
+            { extension: "png", type: "image/png" },
+            { extension: "jpg", type: "image/jpeg" },
+            { extension: "jpeg", type: "image/jpeg" }
+        ]
     },
     open: true,          // Автоматически открывать браузер
     port: 8000,         // Порт для сервера
