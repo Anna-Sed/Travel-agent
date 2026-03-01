@@ -10,10 +10,11 @@
                         Your journey begins here with our curated travel experiences. Discover new horizons, create lasting memories, and explore the world with our expertly crafted itineraries.
                     </p>
                 </div>
-                <div class="discover__form">
+                <!-- Form START -->
+                <form class="discover__form">
                     <label class="form__label" for="locations">
                         <span>Locations</span>
-                        <input class="form__input" type="text" name="locations" id="locations" placeholder="e.g Bali, Indonesia">
+                        <input id="autoCompleteCountry" class="form__input" type="text" name="locations" id="locations" placeholder="e.g Bali, Indonesia" value="">
                     </label>
                     <div class="form__devider"></div>
                     <label class="form__label" for="date">
@@ -21,7 +22,8 @@
                         <input class="form__input" type="text" name="date" id="date" placeholder="MM/DD/YYYY">
                     </label>
                     <input class="form-search-btn" type="image" src="./img/logo/search.svg">
-                </div>
+                </form>
+                <!-- Form END -->
             </div>
             <div class="discover__picture">
                 <div>
