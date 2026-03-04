@@ -51,30 +51,49 @@
                         Your journey begins here with our curated travel experiences. Discover new horizons, create lasting memories, and explore the world with our expertly crafted itineraries.
                     </p>
                 </div>
-                <div class="discover__form">
+                <!-- Form START -->
+                <form class="discover__form">
                     <label class="form__label" for="locations">
                         <span>Locations</span>
-                        <input class="form__input" type="text" name="locations" id="locations" placeholder="e.g Bali, Indonesia">
+                        <input id="autoCompleteCountry" class="form__input" type="text" name="locations" id="locations" placeholder="e.g Bali, Indonesia" value="">
                     </label>
                     <div class="form__devider"></div>
                     <label class="form__label" for="date">
                         <span>Date and time</span>
-                        <input class="form__input" type="text" name="date" id="date" placeholder="MM/DD/YYYY">
+                        <input class="form__input" type="text" name="date" id="datePicket" placeholder="MM/DD/YYYY">
                     </label>
                     <input class="form-search-btn" type="image" src="./img/logo/search.svg">
-                </div>
+                </form>
+                <!-- Form END -->
             </div>
             <div class="discover__picture">
-                <div>
-                    <img src="./../../img/header/hotel.jpg" alt="Hotel">
-                    <p>
-                        Coco De Heaven
-                        <span>(4.5)</span>
-                    </p>
-                    <p>Starts from <span>$</span>400</p>
+                <div class="discover__picture-hint">
+                    <div class="hint-discover">
+    <div class="hint-discover__picture">
+        <img class="hint-discover__img" src="./../../../img/header/hotel.jpg" alt="Hotel">
+    </div>
+    <div class="hint-discover__desc">
+        <div class="hint-discover__title">
+            Coco De Heaven
+            <span class="hint-discover__rating">
+                <img src="./../../../img/logo/star-small.svg" alt="Rating star">
+                (4.5)
+            </span>
+        </div>
+        <div class="hint-discover__price">
+            <p>Starts from <span class="currency">$</span><span class="cost">400</p>
+        </div>
+    </div> 
+</div>
                 </div>
                 <img src="./img/header/subtract.png" alt="Picture" class="discover__picture-img">
-                <img src="../../img/header/group.png" alt="Down" class="discover__picture-down">
+                <div class="discover__picture-scroll">
+                    <div class="scroll-down">
+    <img src="../../../img/header/component-1.svg" alt="Scroll down" class="scroll-down-text">
+    <img src="../../../img/header/component-2.svg" alt="Mouse wheel" class="scroll-down-icon">
+</div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -90,6 +109,20 @@
                 <a href="https://skyscanner.com"><img src="./img/logo/skyscanner.svg" alt="skyscanner"></a>
                 <a href="https://www.americanairlines.ie/intl/ie/index.jsp?locale=en_IE"><img src="./img/logo/american-airlines.svg" alt="american-airlines.svg"></a>
             </div>
+        </div>
+    </div>
+</section>
+        <section class="conection">
+    <div class="container">
+        <div class="conection__content">
+            <div class="conection__desc">
+                <h1 class="conection-title">Join our newsletter to stay up to date </h1>
+                <p class="conection__text">Stay connected with our brand</p>
+            </div>
+            <form class="conection__form">
+                <input type="email" name="email" placeholder="Enter your email" class="conection-input">
+                <button class="submit-btn">Subscribe</button>
+            </form>
         </div>
     </div>
 </section>
