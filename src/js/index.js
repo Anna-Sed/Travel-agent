@@ -1,31 +1,18 @@
 // import mobileNav from './modules/mobile-nav.js';
 // mobileNav();
 
-import autoComplete from "@tarekraafat/autocomplete.js";
-import countryList from "./helpers/countryList";
+import { easepick, TimePlugin } from '@easepick/bundle';
 
-const autoCompleteJS = new autoComplete({
-    selector: "#autoCompleteCountry",
-    placeHolder: "e.g Bali, Indonesia",
-    data: {
-        src: countryList,
-    },
-    resultItem: {
-        highlight: true,
-    },
-    events: {
-        input: {
-            selection: (event) => {
-                const selection = event.detail.selection.value;
-                autoCompleteJS.input.value = selection;
-            },
-        },
-    },
-    resultsList: {
-        maxResults: 10,
-    },
-    searchEngine: 'strict',
+const picker = new easepick.create({
+    element: document.getElementById('datePicket'),
+    css: [
+        'https://cdn.jsdelivr.net/npm/@easepick/core@1.2.1/dist/index.css',
+        'https://cdn.jsdelivr.net/npm/@easepick/time-plugin@1.2.1/dist/index.css',
+    ],
+    format: 'HH:mm, DD/MM/YY',
+    plugins: [TimePlugin],
 });
 
+import getAutoComlete from './modules/autoComplete.js'
 
-
+getAutoComlete();
