@@ -76,9 +76,23 @@
     position: relative;
 }
 
-.discover__picture-down {
+// .discover__picture-down {
+//     position: absolute;
+//     content: '';
+//     bottom: 10px;
+//     right: 19px;
+// }
+
+// .discover__picture-wheel {
+//     position: absolute;
+//     content: '';
+//     bottom: 40px;
+//     right: 65px;
+// }
+
+.discover__picture-hint {
     position: absolute;
     content: '';
-    bottom: 20px;
-    right: 15px;
+    left: 40px;
+    top: 90px;
 }
