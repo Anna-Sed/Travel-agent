@@ -19,23 +19,20 @@
                     <div class="form__devider"></div>
                     <label class="form__label" for="date">
                         <span>Date and time</span>
-                        <input class="form__input" type="text" name="date" id="date" placeholder="MM/DD/YYYY">
+                        <input class="form__input" type="text" name="date" id="datePicket" placeholder="MM/DD/YYYY">
                     </label>
                     <input class="form-search-btn" type="image" src="./img/logo/search.svg">
                 </form>
                 <!-- Form END -->
             </div>
             <div class="discover__picture">
-                <div>
-                    <img src="./../../img/header/hotel.jpg" alt="Hotel">
-                    <p>
-                        Coco De Heaven
-                        <span>(4.5)</span>
-                    </p>
-                    <p>Starts from <span>$</span>400</p>
+                <div class="discover__picture-hint">
+                    @@include('elements/hint-discover.html')
                 </div>
                 <img src="./img/header/subtract.png" alt="Picture" class="discover__picture-img">
-                <img src="../../img/header/group.png" alt="Down" class="discover__picture-down">
+                <div class="discover__picture-scroll">
+                    @@include('elements/scroll-down.html')
+                </div>
             </div>
         </div>
     </div>
