@@ -1,0 +1,23 @@
+.destinations {
+    padding: 60px 0;
+}
+
+.destinations__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 32px;
+}
+
+.destinations__text {
+    display: grid;
+    gap: 16px;
+}
+
+.destinations__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
