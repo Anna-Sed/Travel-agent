@@ -3,6 +3,24 @@
 
 import { easepick, TimePlugin } from '@easepick/bundle';
 
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+
+import getAutoComlete from './modules/autoComplete.js'
+
+// Первый аргумент - селектор по которому мы находим элемент - обёртку, на который вешается свайпер
+// Второй аргумент - объект с настройками
+const swiper = new Swiper('.swiper', {
+    // Configure swiper to use modules
+    slidesPerView: 4,
+    spaceBetween: 32,
+    navigation: {
+        prevEl: '#sliderPrev',
+        nextEl: '#sliderNext',
+    },
+   
+});
+
 const picker = new easepick.create({
     element: document.getElementById('datePicket'),
     css: [
@@ -12,7 +30,5 @@ const picker = new easepick.create({
     format: 'HH:mm, DD/MM/YY',
     plugins: [TimePlugin],
 });
-
-import getAutoComlete from './modules/autoComplete.js'
 
 getAutoComlete();
