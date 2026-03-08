@@ -1,0 +1,63 @@
+.card { 
+    max-width: 304px;
+    max-height: 378px;
+    line-height: 150%;
+}
+
+.card__img {
+    border-radius: 12px;
+    padding-bottom: 16px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+
+.card__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 47px;
+
+    margin-bottom: 4px;
+}
+
+.card-title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.card__rating {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+
+    &::before {
+        content: '';
+        display: block;
+        
+        width: 17px;
+        height: 16px;
+        background-image: url('./../../img/logo/star-small.svg');
+        background-repeat: no-repeat;
+
+    }
+}
+
+.card__price {
+    font-weight: 450;
+    font-size: 16px;
+    color: var(--text-muted);
+
+    .currency {
+        font-weight: 500;
+        color: var(--accent);
+    }
+
+    .price {
+        font-weight: 500;
+        color: var(--text-color);
+    }
+}
