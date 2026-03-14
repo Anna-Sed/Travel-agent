@@ -1,0 +1,94 @@
+.subscribe {
+    padding: 80px 0;
+    background-color: var(--accent);
+    color: var(--page-bg);
+    overflow: hidden;
+}
+
+.subscribe__content {
+    padding-left: 180px;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        
+        top: -84px;
+        left: -130px;
+        width: 280px;
+        height: 273px;
+        background-image: url('../../img/logo/location.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+.subscribe__desc {
+    display: grid;
+    gap: 4px;
+    flex-grow: 0;
+}
+
+.subscribe-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: normal;
+}
+
+.subscribe__text {
+    font-weight: 450;
+    font-size: 20px;
+    line-height: normal;
+}
+
+// FORM
+.subscribe__form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    flex-grow: 1;
+}
+
+.subscribe-input {
+    flex-grow: 1;
+
+    padding: 12px;
+    padding-left: 44px;
+    height: 48px;
+
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 150%;
+
+    border-radius: 8px;
+    background-color: var(--page-bg);
+    
+    background-image: url('./../img/logo/mail.svg');
+    background-position: 12px 12px;
+    background-size: auto;
+    background-repeat: no-repeat; 
+}
+
+.subscribe-btn {
+    padding: 12px 24px;
+    background-color: var(--text-color);
+    border-radius: 8px;
+    height: 48px;
+
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 150%;
+
+    transition: opacity 0.4s ease-in, box-shadow 0.3s ease-in, transform 0.4s ease-in;
+
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 0 4px 8px rgba(94, 82, 82, 0.3);
+        transform: scale(1.05);
+    }
+}
