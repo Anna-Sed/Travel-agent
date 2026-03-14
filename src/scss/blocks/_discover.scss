@@ -62,6 +62,10 @@
     
 }
 
+.form__date {
+    background-image: url('./../img//logo/calendar.svg');
+}
+
 .form__input {
     font-weight: 450;
     font-size: 14px;
@@ -70,29 +74,26 @@
         color: var(--text-muted);
     }
 }
+
+.form-search-btn {
+    transition: opacity 0.4s ease, box-shadow 0.3s ease-in, transform 0.4s ease-in;
+}
+
+.form-search-btn:hover {
+    opacity: 0.8;
+    box-shadow: 0 4px 8px rgba(94, 82, 82, 0.3);
+    transform: scale(1.05);
+}
 // FORM END
 
 .discover__picture {
     position: relative;
 }
 
-// .discover__picture-down {
-//     position: absolute;
-//     content: '';
-//     bottom: 10px;
-//     right: 19px;
-// }
-
-// .discover__picture-wheel {
-//     position: absolute;
-//     content: '';
-//     bottom: 40px;
-//     right: 65px;
-// }
-
 .discover__picture-hint {
     position: absolute;
     content: '';
     left: 40px;
     top: 90px;
+    z-index: 9;
 }
