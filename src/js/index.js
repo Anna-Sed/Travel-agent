@@ -4,9 +4,11 @@
 import easepick from './modules/easepick.js';
 import getAutoComlete from './modules/autoComplete.js';
 import scrollReveal from './modules/scrollReveal.js';
-import swiper from './modules/swiper.js';
+import swiperDirection from './modules/swiper-direction.js';
+import swiperTestimonials from './modules/swiper-testimonials.js';
 
-swiper();
+swiperDirection();
+swiperTestimonials();
 
 easepick();
 
