@@ -2,22 +2,27 @@
     <div class="container">
         <div class="testimonials__grid">
             <div class="testimonials__col">
-                @@include('./testimonials/card3.html')
-                @@include('./testimonials/card.html')
-                @@include('./testimonials/card2.html')
-                @@include('./testimonials/card4.html')
+                <div class="swiper testimonials__swiper" id="testimonials-col-1">
+                    <div class="swiper-wrapper smooth-transition">
+                        <!-- Указываем lson-файл относительно index.html -->
+                        @@loop('./templates/card-testimonials.html', './data/testimonials-col-1.json')
+                    </div>
+                </div>
+                
             </div>
             <div class="testimonials__col">
-                @@include('./testimonials/card4.html')
-                @@include('./testimonials/card5.html')
-                @@include('./testimonials/card6.html')
-                @@include('./testimonials/card7.html')
+                <div class="swiper testimonials__swiper" id="testimonials-col-2">
+                    <div class="swiper-wrapper smooth-transition">
+                        @@loop('./templates/card-testimonials.html', './data/testimonials-col-2.json')
+                    </div>
+                </div>
             </div>
             <div class="testimonials__col">
-                @@include('./testimonials/card7.html')
-                @@include('./testimonials/card8.html')
-                @@include('./testimonials/card9.html')
-                @@include('./testimonials/card.html')
+                <div class="swiper testimonials__swiper" id="testimonials-col-3">
+                    <div class="swiper-wrapper smooth-transition">
+                        @@loop('./templates/card-testimonials.html', './data/testimonials-col-3.json')
+                    </div>
+                </div>
             </div>
         </div>
     </div>
