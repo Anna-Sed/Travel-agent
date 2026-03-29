@@ -120,7 +120,7 @@ gulp.task('server:dev', function() {
 // Говорим, чтобы gulp отслеживал все изменения в определенных файлах, папках и запускал таски на эти изменения.
 gulp.task('watch:dev', function() {
     gulp.watch('./src/scss/**/*.scss', gulp.parallel('sass:dev'));
-    gulp.watch('./src/**/*.html', gulp.parallel('html:dev'));
+    gulp.watch('./src/**/*.*', gulp.parallel('html:dev'));
     gulp.watch('./src/img/**/*', gulp.parallel('copyImg:dev'));
     gulp.watch('./src/fonts/**/*', gulp.parallel('fonts:dev'));
     gulp.watch('./src/files/**/*', gulp.parallel('files:dev'));
