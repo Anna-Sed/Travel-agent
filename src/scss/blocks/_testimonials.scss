@@ -6,19 +6,30 @@
     overflow: hidden;
 }
 
-.testimonials__col {
-    display: grid;
-    gap: 32px;
+// .testimonials__col {
 
-    animation: slideUp 20s linear infinite;
+//     // &:nth-child(2) {
+//     //     // padding-top: 120px;
+//     // }
 
-    &:nth-child(2) {
-        padding-top: 120px;
+//     // &:nth-child(3) {
+//     //     // padding-top: 50px;
+//     // }
+// }
+
+.testimonials__swiper {
+    height: 900px;
+
+    .swiper-slide {
+        padding: 0 10px;
+        height: 325px !important;
     }
+}
 
-    &:nth-child(3) {
-        padding-top: 50px;
-    }
+.smooth-transition {
+    -webkit-transition-timing-function: linear !important;
+    -o-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
 }
 
 @keyframes slideUp {
