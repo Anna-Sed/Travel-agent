@@ -1,13 +1,7 @@
 <!-- Slider main conteiner -->
-<div class="swiper">
+<div class="swiper" id="swiper-destination">
     <div class="swiper-wrapper">
-        <div class="swiper-slide">@@include('./../cards/venice.html')</div>
-        <div class="swiper-slide">@@include('./../cards/bali.html')</div>
-        <div class="swiper-slide">@@include('./../cards/bangkok.html')</div>
-        <div class="swiper-slide">@@include('./../cards/santorini.html')</div>
-        <div class="swiper-slide">@@include('./../cards/paris.html')</div>
-        <div class="swiper-slide">@@include('./../cards/ny.html')</div>
-        <div class="swiper-slide">@@include('./../cards/dubai.html')</div>
+        @@loop('./../templates/card-destination.html', './data/destinations.json')
     </div>
 </div>
 <!-- If we need pagination -->
