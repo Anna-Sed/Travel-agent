@@ -60,9 +60,9 @@ gulp.task('html:docs', function() {
     return gulp
     // **/*.html - первый и второй уровень вложенности файлов
     // '!./src/html/blocks/*.html' - маска. Все html файлы из папки blocks включать не нужно. ! - отрицание.
-        .src(['./src/html/**/*.html', '!./src/html/blocks/*.html']) 
+        .src(['./src/html/**/*.html', '!./src/html/blocks/**/*.html']) 
         .pipe(changed('./docs/'))
-        .pipe(plumber(plumberNotify('HTML')))
+        // .pipe(plumber(plumberNotify('HTML')))
         .pipe(fileInclude(fileIncludeSetting))
         .pipe(webpHTML())
         .pipe(htmlclean()) // Минификация html
