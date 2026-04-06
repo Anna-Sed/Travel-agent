@@ -1,5 +1,11 @@
+@use "../base/mixins" as mixins;
+
 .partners {
     padding: 60px 0;
+
+    @include mixins.mediaTablet {
+        padding: 30px 0;
+    }
 }
 
 .partners__flex {
@@ -7,6 +13,11 @@
     justify-content: space-between;
     gap: 64px;
     align-items: center;
+
+    @include mixins.mediaMobile {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .partners__title {
@@ -15,6 +26,10 @@
     line-height: 140%;
     color: var(--text-muted);
 
+    @include mixins.mediaTablet {
+        font-size: 18px;
+    }
+
 }
 
 .partners__logo {
@@ -22,6 +37,15 @@
     align-items: center;
     justify-content: space-between;
     gap: 32px;
+
+
+    @include mixins.mediaLaptop {
+        gap: 20px;
+    }
+
+    @include mixins.mediaMobileXS {
+        gap: 15px;
+    }
 }
 
 a {
