@@ -1,15 +1,26 @@
+@use './base/mixins' as mixins;
+
 .footer {
     background-color: var(--text-color);
     color: var(--page-bg);
     padding: 80px 120px;
+
+    @include mixins.mediaMobile {
+        padding: 40px;
+    }
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 128px;
+    
+    @include mixins.mediaMobile {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
-
+    
 // .footer__description {
 
 // }
@@ -47,6 +58,11 @@
 
     a {
         color: var(--page-bg);
+    }
+
+    @include mixins.mediaMobile {
+        gap: 20px;
+        grid-row: -1/ 1;
     }
 }
 
