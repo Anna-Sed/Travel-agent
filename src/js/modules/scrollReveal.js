@@ -7,7 +7,7 @@ ScrollReveal({
 });
 
 function getScrollReveal () {
-    ScrollReveal().reveal('.header, .destinations__text', {
+    ScrollReveal().reveal('.destinations__text', {
         origin: 'top', // Появляется сверху вниз
     });
 
