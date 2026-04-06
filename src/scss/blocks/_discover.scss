@@ -1,5 +1,11 @@
+@use "../base/mixins" as mixins;
+
 .discover {
     padding: 60px 0;
+
+     @include mixins.mediaMobile {
+       padding: 30px 0;
+    }
 }
 
 .discover__grid {
@@ -7,16 +13,29 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
     align-items: center;
+
+    @include mixins.mediaTablet {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 
 .discover__desc {
     padding-top: 90px;
     padding-bottom: 60px;
+
+    @include mixins.mediaTablet {
+        padding: 0px;
+    }
 }
 
 .discover__text {
     padding-top: 24px;
     padding-bottom: 40px;
+
+    @include mixins.mediaMobileXS {
+        padding-bottom: 20px;
+    }
 }
 
 // FORM START
@@ -30,6 +49,10 @@
     border: 1px solid rgba(144, 144, 144, 0.3);
     border-radius: 16px;
     padding: 12px 16px;
+
+    @include mixins.mediaMobile {
+        grid-template-columns: 1fr;
+    }
 }
 
 .form__devider {
@@ -38,12 +61,22 @@
     opacity: 1;
     background: var(--text-muted);
 
+    @include mixins.mediaMobile {
+        display: none;
+    }
+
 }
 
 .form-search-btn {
+    
     padding: 12px;
     border-radius: 10px;
     background-color: var(--accent);
+
+    @include mixins.mediaMobile {
+        padding: 12px 70px;
+        margin: 0 auto;
+    }
 }
 
 .form__label  {
@@ -59,11 +92,11 @@
         font-weight: 600;
         font-size: 16px;
     }
-    
-}
 
-.form__date {
-    background-image: url('./../img//logo/calendar.svg');
+    &--calendar {
+        background-image: url('./../img//logo/calendar.svg');
+    }
+    
 }
 
 .form__input {
@@ -77,17 +110,25 @@
 
 .form-search-btn {
     transition: opacity 0.4s ease, box-shadow 0.3s ease-in, transform 0.4s ease-in;
+
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0 4px 8px rgba(94, 82, 82, 0.3);
+        transform: scale(1.05);
+    }
 }
 
-.form-search-btn:hover {
-    opacity: 0.8;
-    box-shadow: 0 4px 8px rgba(94, 82, 82, 0.3);
-    transform: scale(1.05);
-}
 // FORM END
 
 .discover__picture {
     position: relative;
+
+    width: fit-content;
+    justify-self: center;
+
+    @include mixins.mediaTablet {
+        grid-row: -1 / 1;
+    }
 }
 
 .discover__picture-hint {
@@ -96,4 +137,18 @@
     left: 40px;
     top: 90px;
     z-index: 9;
+
+    @include mixins.mediaLaptop {
+       left: 20px;
+        top: 40px; 
+    }
+
+    @include mixins.mediaMobile {
+       left: 0px;
+        top: 30px; 
+    }
+
+    @include mixins.mediaMobileXS {
+       display: none;
+    }
 }
