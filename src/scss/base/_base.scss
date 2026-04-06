@@ -1,3 +1,5 @@
+@use "./base/mixins" as mixins;
+
 html {
     scroll-behavior: smooth;
 }
@@ -26,7 +28,26 @@ body {
         width: 268px;
         height: 24px;;
         background-image: url('./../img/header/underline.svg');
+        background-repeat: no-repeat;
         z-index: -1;
+
+        @include mixins.mediaMobile {
+            width: 184px;
+            height: 12px;
+            background-size: contain;
+        }
+    }
+
+    @include mixins.mediaTablet {
+        font-size: 52px;
+    }
+
+    @include mixins.mediaMobile {
+        font-size: 32px;
+    }
+
+    @include mixins.mediaMobileXS {
+        font-size: 26px;
     }
 }
 
@@ -35,6 +56,10 @@ body {
     font-size: 36px;
     font-style: normal;
     line-height: normal;
+
+     @include mixins.mediaMobile {
+        font-size: 28px;
+    }
 }
 
 .text {
@@ -42,4 +67,8 @@ body {
     font-size: 18px;
     line-height: 150%;
     color: var(--text-muted); 
+
+    @include mixins.mediaMobile {
+        font-size: 16px;
+    }
 }
