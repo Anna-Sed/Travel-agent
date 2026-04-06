@@ -68,6 +68,5 @@ const breakpointChecker = function () {
 };
 
 breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
 
 export default breakpointChecker;
