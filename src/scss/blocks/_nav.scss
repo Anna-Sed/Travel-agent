@@ -1,3 +1,5 @@
+@use "../base/mixins" as mixins;
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -7,6 +9,10 @@
     font-weight: 450;
     font-size: 16px;
     line-height: 150%;
+}
+
+.nav__logo {
+    flex-shrink: 0;
 }
 
 .nav__list {
@@ -20,11 +26,27 @@
 
     a:hover, a.active {
         color: var(--accent);
-    } 
+    }
+
+    @include mixins.mediaMobile {
+        display: none;
+    }
 }
 
 .nav__btns {
     display: flex;
     justify-content: end;
     column-gap: 12px;
+
+    @include mixins.mediaMobile {
+        display: none;
+    }
+}
+
+.nav__icon {
+    display: none;
+    
+    @include mixins.mediaMobile {
+        display: block;
+    }
 }
