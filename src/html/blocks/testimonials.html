@@ -1,5 +1,18 @@
 <section class="testimonials">
     <div class="container">
+
+        <!-- Horizontal slider -->
+        <div class="testimonials-horizontal">
+                <div class="swiper" id="testimonials-horizontal-swiper">
+                    <div class="swiper-wrapper smooth-transition">
+                        <!-- Указываем lson-файл относительно index.html -->
+                        @@loop('./templates/card-testimonials.html', './data/testimonials-all.json')
+                    </div>
+                </div>
+            </div>
+            <!-- // Horizontal slider -->
+
+            <!-- Vertical slider -->
         <div class="testimonials__grid">
             <div class="testimonials__col">
                 <div class="swiper testimonials__swiper" id="testimonials-col-1">
@@ -25,5 +38,6 @@
                 </div>
             </div>
         </div>
+        <!-- // Vertical slider -->
     </div>
 </section>
