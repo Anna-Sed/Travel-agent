@@ -1,6 +1,8 @@
+@use "../base/mixins" as mixins;
+
 .card { 
     max-width: 304px;
-    max-height: 378px;
+    max-height: 400px;
     line-height: 150%;
 }
 
@@ -20,11 +22,31 @@
     gap: 47px;
 
     margin-bottom: 4px;
+
+    @include mixins.mediaTablet {
+        gap: 5px;
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+
+    @include mixins.mediaMobileM {
+        flex-direction: row;
+        align-items: center;
+    }
+
 }
 
 .card-title {
     font-weight: 500;
     font-size: 20px;
+
+    @include mixins.mediaTablet {
+        font-size: 16px;
+    }
+
+    @include mixins.mediaMobileM {
+        font-size: 20px;
+    }
 }
 
 .card__rating {
