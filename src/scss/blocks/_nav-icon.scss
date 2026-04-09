@@ -1,9 +1,8 @@
 .mobile-nav-btn {
     // новое свойство - тест
     position: relative;
-    z-index: 15; /* выше меню */
+    z-index: 15;
     top: 0;
-    right: 40px;
     // Окончание
 
     --time: 0.1s;
