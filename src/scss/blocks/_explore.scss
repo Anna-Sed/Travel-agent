@@ -1,5 +1,15 @@
+@use "../base/mixins" as mixins; 
+
 .explore {
     padding: 112px 0;
+
+    @include mixins.mediaTablet {
+        padding: 60px 0;
+    }
+
+    @include mixins.mediaMobileXS {
+        padding: 40px 0;
+    }
 }
 
 .explore__grid {
@@ -9,21 +19,78 @@
     align-items: center;
 
     position: relative;
+
+    @include mixins.mediaTablet {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        justify-items: center;
+    }
+}
+
+.explore__picture {
+    .explore__picture-guide-hint {
+        @media (max-width: 1300px) {
+            left: -10px;
+        }
+
+        @include mixins.mediaTablet {
+            left: 150px;
+        }
+
+        @media (max-width: 920px){
+            display: none;
+        }
+    }
+
+    .explore__picture-hint {
+        @media (max-width: 1130px){
+            left: 240px;
+            top: 25px;
+        }
+
+        @include mixins.mediaTablet {
+            left: 55%;
+        }
+
+        @include mixins.mediaMobile {
+            display: none;
+        }
+    }
 }
 
 .explore__desc {
     display: flex;
     flex-direction: column;
-    max-width: 560px;
+    // max-width: 560px;
     gap: 24px;
     text-align: left;
     justify-content: space-between;
+
+    @include mixins.mediaTablet {
+        padding-left: 20px;
+    }
+
+    @include mixins.mediaMobile {
+        padding-left: 10px;
+    }
+
+     @include mixins.mediaMobileM {
+        grid-row: -1 / 1;
+    }
 }
 
 .explore__title {
     font-weight: 500;
     font-size: 40px;
     line-height: 120%;
+
+    @include mixins.mediaMobile {
+        font-size: 28px;
+    }
+
+    @include mixins.mediaMobileXS {
+        font-size: 22px;
+    }
 }
 
 .explore__text{
@@ -31,6 +98,10 @@
     font-size: 18px;
     line-height: 150%;
     color: var(--text-muted);
+
+    @include mixins.mediaMobile {
+        font-size: 16px;
+    }
 }
 
 .explore__btn {
@@ -48,6 +119,10 @@
     color: var(--page-bg);
 
     transition: opacity 0.4s ease, box-shadow 0.3s ease-in, transform 0.4s ease-in;
+
+    @include mixins.mediaMobile {
+        margin: 0 auto;
+    }
 }
 
 .explore__btn:hover {
