@@ -12,31 +12,31 @@
         "price": 440
     },
     {
-        "image": "./../../img/direction/dubai.jpg",
+        "image": "./img/direction/dubai.jpg",
         "location": "Dubai, UAE",
         "rating": "(4.5)",
         "price": 900
     },
     {
-        "image": "./../../img/direction/new-york.jpg",
+        "image": "./img/direction/new-york.jpg",
         "location": "New York, USA",
         "rating": "(4.5)",
         "price": 1800
     },
     {
-        "image": "./../../img/direction/paris.jpg",
+        "image": "./img/direction/paris.jpg",
         "location": "Paris, France",
         "rating": "(4.5)",
         "price": 1100
     },
     {
-        "image": "./../../img/direction/santorini.jpg",
+        "image": "./img/direction/santorini.jpg",
         "location": "Santorini, Greek",
         "rating": "(4.5)",
         "price": 900
     },
     {
-        "image": "./../../img/direction/venice.jpg",
+        "image": "./img/direction/venice.jpg",
         "location": "Venice, Italy",
         "rating": "(4.5)",
         "price": 900

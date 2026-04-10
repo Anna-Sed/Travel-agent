@@ -4,41 +4,41 @@
         "text": "Lorem ipsum dolor sit amet, Efficient and reliable! The travel website helped me find the best travel deals, and their user-friendly interface made the booking process a breeze.",
         "role": "Travel Enthusiast",
         "name": "Jonathan R.",
-        "avatar": "./../../../img/avatar/07.jpg"
+        "avatar": "./img/avatar/07.jpg"
     },
     {
         "stars": 4,
         "text": "I loved the personalized itinerary feature of this travel website. It allowed me to plan my trip according to my preferences, making it a truly customized experience.",
         "role": "Travel Enthusiast",
         "name": "Angela Cole",
-        "avatar": "./../../../img/avatar/08.jpg"
+        "avatar": "./img/avatar/08.jpg"
     },
     {
         "stars": 5,
         "text": "A one-stop-shop for all things travel! The website's variety of travel options and user reviews helped me make informed decisions and ensured a smooth trip.",
         "role": "Travel Enthusiast",
         "name": "Bambang Susilo",
-        "avatar": "./../../../img/avatar/09.png"  
+        "avatar": "./img/avatar/09.png"  
     },
       {
         "stars": 5,
         "text": "Lorem ipsum dolor sit amet, Efficient and reliable! The travel website helped me find the best travel deals, and their user-friendly interface made the booking process a breeze.",
         "role": "Travel Enthusiast",
         "name": "Jonathan R.",
-        "avatar": "./../../../img/avatar/07.jpg"
+        "avatar": "./img/avatar/07.jpg"
     },
     {
         "stars": 4,
         "text": "I loved the personalized itinerary feature of this travel website. It allowed me to plan my trip according to my preferences, making it a truly customized experience.",
         "role": "Travel Enthusiast",
         "name": "Angela Cole",
-        "avatar": "./../../../img/avatar/08.jpg"
+        "avatar": "./img/avatar/08.jpg"
     },
     {
         "stars": 5,
         "text": "A one-stop-shop for all things travel! The website's variety of travel options and user reviews helped me make informed decisions and ensured a smooth trip.",
         "role": "Travel Enthusiast",
         "name": "Bambang Susilo",
-        "avatar": "./../../../img/avatar/09.png"  
+        "avatar": "./img/avatar/09.png"  
     }
 ]
