@@ -1,12 +1,12 @@
 [
     {
-        "image": "./../../img/direction/bali.jpg",
+        "image": "./img/direction/bali.jpg",
         "location": "Bali, Indonesia",
         "rating": "(4.5)",
         "price": 480
     },
     {
-        "image": "./../../img/direction/bangkok.jpg",
+        "image": "./img/direction/bangkok.jpg",
         "location": "Bangkok, Thailand",
         "rating": "(4.5)",
         "price": 440

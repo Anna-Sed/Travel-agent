@@ -4,12 +4,12 @@
             <!-- Каждый объект с информацией о пользователе, который мы передаем через массив в файле json 
             - это и есть context -->
             @@for (let i = 0; i < context.stars; i++) {
-                <img src="./../../../img/logo/star-small.svg" alt="star">
+                <img src="./img/logo/star-small.svg" alt="star">
             }
 
             @@if (context.stars < 5) {
                 @@for (let i = 0; i < 5 - context.stars; i++) {
-                    <img src="./../../../img/logo/star-off.svg" alt="star-off">
+                    <img src="./img/logo/star-off.svg" alt="star-off">
                 }
             }
         </div>
