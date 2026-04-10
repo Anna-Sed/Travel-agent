@@ -10,6 +10,8 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'docs/js'),
         filename: '[name].bundle.js', // в [name] - это placeholder, сюда будет попадать имя файла в зависимости от файла js
+        publicPath: '/Travel-agent/', // для GitHub Pages
+  //    или publicPath: '/', если сайт в корне
     },
     module: {
         rules: [
